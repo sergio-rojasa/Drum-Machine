@@ -1,0 +1,19 @@
+{
+  "name": "drum-machine",
+  "version": "1.0.0",
+  "description": "Drum Machine is web application that user can play drums, cymbals, other percussion instruments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiorojasa/Drum-Machine.git"
+  },
+  "author": "Sergio Rojas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiorojasa/Drum-Machine/issues"
+  },
+  "homepage": "https://github.com/sergiorojasa/Drum-Machine#readme"
+}
