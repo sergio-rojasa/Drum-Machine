@@ -21717,15 +21717,15 @@ var Container = function (_React$Component) {
         'div',
         { id: 'drum-machine' },
         _react2.default.createElement(Display, null),
-        _react2.default.createElement(DrumPad, { note: 'Q' }),
-        _react2.default.createElement(DrumPad, { note: 'W' }),
-        _react2.default.createElement(DrumPad, { note: 'E' }),
-        _react2.default.createElement(DrumPad, { note: 'A' }),
-        _react2.default.createElement(DrumPad, { note: 'S' }),
-        _react2.default.createElement(DrumPad, { note: 'D' }),
-        _react2.default.createElement(DrumPad, { note: 'Z' }),
-        _react2.default.createElement(DrumPad, { note: 'X' }),
-        _react2.default.createElement(DrumPad, { note: 'C' })
+        _react2.default.createElement(DrumPad, { description: 'Heater-1', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3', note: 'Q' }),
+        _react2.default.createElement(DrumPad, { description: 'Heater-2', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3', note: 'W' }),
+        _react2.default.createElement(DrumPad, { description: 'Heater-3', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3', note: 'E' }),
+        _react2.default.createElement(DrumPad, { description: 'Heater-4', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3', note: 'A' }),
+        _react2.default.createElement(DrumPad, { description: 'Heater-6', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3', note: 'S' }),
+        _react2.default.createElement(DrumPad, { description: 'Dsc_Oh', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3', note: 'D' }),
+        _react2.default.createElement(DrumPad, { description: 'Kick_n_Hat', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3', note: 'Z' }),
+        _react2.default.createElement(DrumPad, { description: 'RP4_KICK_1', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3', note: 'X' }),
+        _react2.default.createElement(DrumPad, { description: 'Cev_H2', audioClip: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3', note: 'C' })
       );
     }
   }]);
@@ -21766,8 +21766,9 @@ var DrumPad = function (_React$Component3) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: this.props.note, className: 'drum-pad' },
-        this.props.note
+        { id: this.props.description, className: 'drum-pad' },
+        this.props.note,
+        _react2.default.createElement('audio', { src: this.props.audioClip, id: this.props.note, className: 'clip' })
       );
     }
   }]);
