@@ -12,3 +12,13 @@
   margin-left: 20px;
   margin-top: 10px;
 }
+
+.drum-pad {
+  height: 75px;
+  width: 75px;
+  background-color: gray;
+  display: inline-block;
+  margin: 1px;
+  margin-top: 20px;
+  margin-left: 7px;
+}

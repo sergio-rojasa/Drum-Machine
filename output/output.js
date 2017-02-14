@@ -21716,7 +21716,16 @@ var Container = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { id: 'drum-machine' },
-        _react2.default.createElement(Display, null)
+        _react2.default.createElement(Display, null),
+        _react2.default.createElement(DrumPad, { note: 'Q' }),
+        _react2.default.createElement(DrumPad, { note: 'W' }),
+        _react2.default.createElement(DrumPad, { note: 'E' }),
+        _react2.default.createElement(DrumPad, { note: 'A' }),
+        _react2.default.createElement(DrumPad, { note: 'S' }),
+        _react2.default.createElement(DrumPad, { note: 'D' }),
+        _react2.default.createElement(DrumPad, { note: 'Z' }),
+        _react2.default.createElement(DrumPad, { note: 'X' }),
+        _react2.default.createElement(DrumPad, { note: 'C' })
       );
     }
   }]);
@@ -21743,8 +21752,31 @@ var Display = function (_React$Component2) {
   return Display;
 }(_react2.default.Component);
 
-var App = function (_React$Component3) {
-  _inherits(App, _React$Component3);
+var DrumPad = function (_React$Component3) {
+  _inherits(DrumPad, _React$Component3);
+
+  function DrumPad() {
+    _classCallCheck(this, DrumPad);
+
+    return _possibleConstructorReturn(this, (DrumPad.__proto__ || Object.getPrototypeOf(DrumPad)).apply(this, arguments));
+  }
+
+  _createClass(DrumPad, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { id: this.props.note, className: 'drum-pad' },
+        this.props.note
+      );
+    }
+  }]);
+
+  return DrumPad;
+}(_react2.default.Component);
+
+var App = function (_React$Component4) {
+  _inherits(App, _React$Component4);
 
   function App() {
     _classCallCheck(this, App);
