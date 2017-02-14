@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var HelloWorld = React.createClass({
-  render: function() {
+class Container extends React.Component {
+  render() {
+    return <div id="drum-machine"></div>;
+  }
+}
+
+class App extends React.Component {
+  render() {
     return (
-      <p>Hello, {this.props.greetTarget}!</p>
+      <div>
+        <Container />
+      </div>
     );
   }
-});
+}
 
 ReactDOM.render(
-  <div>
-    <HelloWorld greetTarget="World"/>
-  </div>,
+  <App />,
   document.querySelector("#root")
 );
