@@ -21713,15 +21713,38 @@ var Container = function (_React$Component) {
   _createClass(Container, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', { id: 'drum-machine' });
+      return _react2.default.createElement(
+        'div',
+        { id: 'drum-machine' },
+        _react2.default.createElement(Display, null)
+      );
     }
   }]);
 
   return Container;
 }(_react2.default.Component);
 
-var App = function (_React$Component2) {
-  _inherits(App, _React$Component2);
+var Display = function (_React$Component2) {
+  _inherits(Display, _React$Component2);
+
+  function Display() {
+    _classCallCheck(this, Display);
+
+    return _possibleConstructorReturn(this, (Display.__proto__ || Object.getPrototypeOf(Display)).apply(this, arguments));
+  }
+
+  _createClass(Display, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { id: 'display' });
+    }
+  }]);
+
+  return Display;
+}(_react2.default.Component);
+
+var App = function (_React$Component3) {
+  _inherits(App, _React$Component3);
 
   function App() {
     _classCallCheck(this, App);

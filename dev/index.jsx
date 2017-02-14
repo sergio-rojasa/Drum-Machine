@@ -3,7 +3,17 @@ import ReactDOM from 'react-dom';
 
 class Container extends React.Component {
   render() {
-    return <div id="drum-machine"></div>;
+    return (
+      <div id="drum-machine">
+        <Display />
+      </div>
+    );
+  }
+}
+
+class Display extends React.Component {
+  render() {
+    return <div id="display"></div>;
   }
 }
 
