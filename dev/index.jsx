@@ -35,15 +35,19 @@ class DrumPad extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    //var element = document.getElementById('')
+  handleClick(event) {
     var element = document.getElementById(this.props.note);
+    var description = document.getElementById(this.props.description);
+    var description = description.id;
+    var display = document.getElementById("display");
+
+    display.innerHTML = description;
     element.play();
   }
 
   render() {
     return(
-      <div id={this.props.description} className="drum-pad" onClick={this.handleClick}>
+      <div id={this.props.description} className="drum-pad" onClickCapture={this.handleClick}>
         {this.props.note}
         <audio src={this.props.audioClip} id={this.props.note} className="clip"></audio>
       </div>

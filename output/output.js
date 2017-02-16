@@ -21766,9 +21766,15 @@ var DrumPad = function (_React$Component3) {
 
   _createClass(DrumPad, [{
     key: 'handleClick',
-    value: function handleClick() {
-      //var element = document.getElementById('')
+    value: function handleClick(event) {
       var element = document.getElementById(this.props.note);
+      var description = document.getElementById(this.props.description);
+      var description = description.id;
+      var display = document.getElementById("display");
+
+      console.log(description);
+
+      display.innerHTML = description;
       element.play();
     }
   }, {
@@ -21776,7 +21782,7 @@ var DrumPad = function (_React$Component3) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: this.props.description, className: 'drum-pad', onClick: this.handleClick },
+        { id: this.props.description, className: 'drum-pad', onClickCapture: this.handleClick },
         this.props.note,
         _react2.default.createElement('audio', { src: this.props.audioClip, id: this.props.note, className: 'clip' })
       );
