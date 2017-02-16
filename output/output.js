@@ -21755,18 +21755,28 @@ var Display = function (_React$Component2) {
 var DrumPad = function (_React$Component3) {
   _inherits(DrumPad, _React$Component3);
 
-  function DrumPad() {
+  function DrumPad(props) {
     _classCallCheck(this, DrumPad);
 
-    return _possibleConstructorReturn(this, (DrumPad.__proto__ || Object.getPrototypeOf(DrumPad)).apply(this, arguments));
+    var _this3 = _possibleConstructorReturn(this, (DrumPad.__proto__ || Object.getPrototypeOf(DrumPad)).call(this, props));
+
+    _this3.handleClick = _this3.handleClick.bind(_this3);
+    return _this3;
   }
 
   _createClass(DrumPad, [{
+    key: 'handleClick',
+    value: function handleClick() {
+      //var element = document.getElementById('')
+      var element = document.getElementById(this.props.note);
+      element.play();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: this.props.description, className: 'drum-pad' },
+        { id: this.props.description, className: 'drum-pad', onClick: this.handleClick },
         this.props.note,
         _react2.default.createElement('audio', { src: this.props.audioClip, id: this.props.note, className: 'clip' })
       );

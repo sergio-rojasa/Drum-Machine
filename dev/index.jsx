@@ -30,9 +30,20 @@ class Display extends React.Component {
 }
 
 class DrumPad extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    //var element = document.getElementById('')
+    var element = document.getElementById(this.props.note);
+    element.play();
+  }
+
   render() {
     return(
-      <div id={this.props.description} className="drum-pad">
+      <div id={this.props.description} className="drum-pad" onClick={this.handleClick}>
         {this.props.note}
         <audio src={this.props.audioClip} id={this.props.note} className="clip"></audio>
       </div>
